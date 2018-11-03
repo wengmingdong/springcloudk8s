@@ -10,8 +10,8 @@ import reactor.core.publisher.Mono;
 @RefreshScope
 public class HelloController {
 
-    @Value("${info.profile}")
-    private String profile;
+    //@Value("${info.profile}")
+    private String profile="abc";
 
     @GetMapping("/info")
     public Mono<String> hello() {
