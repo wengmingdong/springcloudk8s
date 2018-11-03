@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: eureka
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: eureka
+    spec:
+      containers:
+      - name: eureka
+        image: 192.168.56.20:5000/eureka:v1
+        env:
+        - name: AUTHOR
+          value: eureka
+        ports:
+        - containerPort: 7000
