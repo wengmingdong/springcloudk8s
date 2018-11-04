@@ -8,7 +8,6 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 @EnableConfigServer
 public class ConfigServerApplication {
     public static void main(String[] args) {
-        //http://127.0.0.1:7001/config-client/dev
         SpringApplication.run(ConfigServerApplication.class, args);
     }
 }

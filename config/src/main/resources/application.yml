@@ -10,6 +10,8 @@ spring:
 server:
   port: 12000
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://eureka-server:7000/eureka/
