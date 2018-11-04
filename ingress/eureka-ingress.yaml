@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+  name: app-ingress
+spec:
+  rules:
+  - host: test.eureka.wengmd.com
+    http:
+      paths:
+      - backend:
+          serviceName: eureka-server
+          servicePort: 7000
+       
