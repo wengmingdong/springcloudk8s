@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: config-client
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: config-client
+    spec:
+      containers:
+      - name: config-client
+        image: 192.168.56.60:5000/config-client:v1
+        env:
+        - name: AUTHOR
+          value: config-client
+        ports:
+        - containerPort: 13000

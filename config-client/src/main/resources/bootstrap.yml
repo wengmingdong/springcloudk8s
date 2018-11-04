@@ -8,6 +8,8 @@ spring:
         enabled: true
         service-id: config-server
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://eureka-server:7000/eureka/
